@@ -4,8 +4,9 @@ import { NestExpressApplication } from '@nestjs/platform-express';
 import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
 import * as compression from 'compression';
 import * as express from 'express';
-import * as helmet from 'helmet';
+import helmet from 'helmet';
 import * as morgan from 'morgan';
+import { WINSTON_MODULE_NEST_PROVIDER } from 'nest-winston';
 import { resolve } from 'path';
 
 import { AppExceptionFilter, swaggerDescription, swaggerOptions } from '@common';
@@ -28,6 +29,11 @@ async function bootstrap() {
   //   cert: readFileSync(resolve('.', 'config', 'ssl', 'localhost.pem'))
   // };
   const app = await NestFactory.create<NestExpressApplication>(ApplicationModule);
+
+  // =================================
+  // Winston Logger
+  // =================================
+  app.useLogger(app.get(WINSTON_MODULE_NEST_PROVIDER));
 
   // =================================
   // configureExpressSettings

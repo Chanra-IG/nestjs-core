@@ -1,9 +1,9 @@
 import { Logger } from '@nestjs/common';
 import * as Redis from 'ioredis';
 
-import { ConfigService } from '../config';
 import { IOREDIS_PUB_SUB_TOKEN, IOREDIS_TOKEN } from './ioredis.constant';
 import { IORedisConfig } from './ioredis.dto';
+import { ConfigService } from '../config';
 
 /*
 |--------------------------------------------------------------------------
