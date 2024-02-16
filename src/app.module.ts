@@ -16,6 +16,7 @@ import { KeycloakModule } from '@lib/keycloak';
 import { MailerModule } from '@lib/mailer';
 import { MediaStreamModule } from '@lib/media-stream';
 import { MongooseModule } from '@lib/mongoose';
+import { RateLimitingModule } from '@lib/rate-limiting';
 import { SendBirdModule } from '@lib/sendbird';
 import { SequelizeModule } from '@lib/sequelize';
 import { SocialModule } from '@lib/social';
@@ -55,7 +56,8 @@ import { ApiModule } from './api/api.module';
     Tile38Module,
     TwilioModule,
     WowzaModule,
-    WinstonLoggerModule
+    WinstonLoggerModule,
+    RateLimitingModule
   ]
 })
 export class ApplicationModule {}
