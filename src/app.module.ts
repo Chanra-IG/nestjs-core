@@ -1,7 +1,6 @@
 import { Module } from '@nestjs/common';
 import { ScheduleModule } from '@nestjs/schedule';
 
-import { DynamoDBModule } from '@dynamodb';
 import { Auth0Module } from '@lib/auth0';
 import { AWSModule } from '@lib/aws';
 import { ConfigModule } from '@lib/config';
@@ -17,7 +16,6 @@ import { MailerModule } from '@lib/mailer';
 import { MediaStreamModule } from '@lib/media-stream';
 import { MongooseModule } from '@lib/mongoose';
 import { RateLimitingModule } from '@lib/rate-limiting';
-import { SendBirdModule } from '@lib/sendbird';
 import { SequelizeModule } from '@lib/sequelize';
 import { SocialModule } from '@lib/social';
 import { SocketModule } from '@lib/socket';
@@ -36,7 +34,6 @@ import { ApiModule } from './api/api.module';
     ApiModule,
     ConfigModule,
     CryptoModule,
-    DynamoDBModule,
     FirebaseAdminModule,
     GoogleCloudStorageModule,
     GraphQLRequestModule,
@@ -48,7 +45,6 @@ import { ApiModule } from './api/api.module';
     MediaStreamModule,
     MongooseModule,
     ScheduleModule.forRoot(),
-    SendBirdModule,
     SequelizeModule,
     SocialModule,
     SocketModule,

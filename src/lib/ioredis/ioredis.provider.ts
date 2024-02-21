@@ -1,5 +1,5 @@
 import { Logger } from '@nestjs/common';
-import * as Redis from 'ioredis';
+import Redis from 'ioredis';
 
 import { IOREDIS_PUB_SUB_TOKEN, IOREDIS_TOKEN } from './ioredis.constant';
 import { IORedisConfig } from './ioredis.dto';
@@ -15,8 +15,8 @@ import { ConfigService } from '../config';
 
 const logger = new Logger('IORedisModule');
 
-let redis: Redis.Redis;
-let subscriber: Redis.Redis;
+let redis: Redis;
+let subscriber: Redis;
 
 export const IORedisProvider = {
   inject: [ConfigService],

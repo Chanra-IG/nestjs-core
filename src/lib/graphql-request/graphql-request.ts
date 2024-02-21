@@ -33,11 +33,11 @@ export class GraphQLRequest {
   }
 }
 
-interface GetCharactersOption {
+type GetCharactersOption = {
   page: number;
   name?: string;
   gender?: string;
-}
+};
 
 interface GetCharactersResult {
   characters: {

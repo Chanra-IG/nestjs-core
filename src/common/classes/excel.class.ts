@@ -80,13 +80,13 @@ export class ExcelDocument {
   // STATIC HELPER FUNCTIONS
   // =================================
 
-  static async readStream<T = any>(stream: Stream, opt: ReadOption): Promise<T[]> {
+  static async readStream<T = any>(stream: Stream, opt: ReadOption): Promise<T[] | undefined> {
     const workbook = new Workbook();
     await workbook.xlsx.read(stream);
     return this.read(workbook, opt);
   }
 
-  static async readFile<T = any>(fileName: string, opt: ReadOption): Promise<T[]> {
+  static async readFile<T = any>(fileName: string, opt: ReadOption): Promise<T[] | undefined> {
     const workbook = new Workbook();
     await workbook.xlsx.readFile(fileName);
     return this.read(workbook, opt);
@@ -94,6 +94,8 @@ export class ExcelDocument {
 
   private static async read(workbook: Workbook, opt: ReadOption) {
     const worksheet = workbook.getWorksheet(opt.sheetName);
+    if (!worksheet) return;
+
     const rowHeaders = worksheet.getRow(1).values as string[]; // Get Worksheet Header
 
     /**

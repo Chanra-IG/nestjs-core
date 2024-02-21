@@ -9,7 +9,7 @@ const readFileAsync = promisify(readFile);
 /**
  * Custom Repository with enhance query raw sql statement
  */
-export class BaseRepository<T> extends Repository<T> {
+export class BaseRepository<T extends ObjectLiteral> extends Repository<T> {
   /**
    * Run SQL with key value pair parameters
    *

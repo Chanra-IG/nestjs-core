@@ -2,10 +2,10 @@ import Keycloak from '@keycloak/keycloak-admin-client';
 import { Provider } from '@nestjs/common';
 import { Issuer } from 'openid-client';
 
-import { ConfigService } from '../config';
 import { KEYCLOAK_TOKEN } from './keycloak.constant';
 import { AuthConfig } from './keycloak.dto';
 import { KeycloakStrategy } from './keycloak.strategy';
+import { ConfigService } from '../config';
 
 export const KeycloakStrategyProvider: Provider = {
   inject: [ConfigService],
