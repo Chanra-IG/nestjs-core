@@ -1,0 +1,1 @@
+export const PLASGATE_TOKEN = 'PLASGATE_INJECT_TOKEN';
