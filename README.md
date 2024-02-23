@@ -92,7 +92,7 @@ Second, Run the development server:
   - Rate Limiting
   - Winston Logger
   - Tile38
-  - Swagger
+  - Swagger API Documentation
 
 ## Changelog
 
