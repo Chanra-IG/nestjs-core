@@ -4,6 +4,7 @@
 |--------------------------------------------------------------------------
 */
 export * as T from './types';
+export * as E from './enums';
 export * as FN from './functions';
 
 /*
@@ -54,6 +55,13 @@ export { AppExceptionFilter } from './exceptions/app-exception-filter';
 export { ApiGuard } from './guards/api.guard';
 export { Authenticate } from './guards/authenticate.guard';
 export { Authorize } from './guards/authorize.guard';
+
+/*
+|--------------------------------------------------------------------------
+| Helpers
+|--------------------------------------------------------------------------
+*/
+export { Paginated, PaginatedOptions } from './helpers/pagination.helper';
 
 /*
 |--------------------------------------------------------------------------
