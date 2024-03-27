@@ -1,9 +1,11 @@
 /*
 |--------------------------------------------------------------------------
-| Types / Enum
+| Types / Enum / Functions
 |--------------------------------------------------------------------------
 */
 export * as T from './types';
+export * as E from './enums';
+export * as FN from './functions';
 
 /*
 |--------------------------------------------------------------------------
@@ -37,6 +39,7 @@ export { ApiCustomHeader, ApiCustomHeaders } from './decorators/api-headers.deco
 export { Auth } from './decorators/auth.decorator';
 export { AuthUser, AuthUserX } from './decorators/auth-user.decorator';
 export * from './decorators/dto.decorator';
+export * from './decorators/response.decorator';
 
 /*
 |--------------------------------------------------------------------------
@@ -56,12 +59,20 @@ export { Authorize } from './guards/authorize.guard';
 
 /*
 |--------------------------------------------------------------------------
+| Helpers
+|--------------------------------------------------------------------------
+*/
+export { Paginated, PaginatedOptions } from './helpers/pagination.helper';
+
+/*
+|--------------------------------------------------------------------------
 | Interceptors
 |--------------------------------------------------------------------------
 */
 export { AuditingInterceptor } from './interceptors/auditing.interceptor';
 export { CSVMulterOption } from './interceptors/csv-multer.interceptor';
 export { ImageMulterOption } from './interceptors/image-multer.interceptor';
+export { ResponseInterceptor } from './interceptors/response.interceptor';
 
 /*
 |--------------------------------------------------------------------------

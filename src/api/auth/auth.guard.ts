@@ -13,7 +13,10 @@ import { JWTPayload } from './auth.interfaces';
 
 @Injectable()
 export class AuthGuard implements CanActivate {
-  constructor(private readonly service: JwtService, private readonly reflector: Reflector) {}
+  constructor(
+    private readonly service: JwtService,
+    private readonly reflector: Reflector
+  ) {}
 
   async canActivate(context: ExecutionContext) {
     const handler = context.getHandler();

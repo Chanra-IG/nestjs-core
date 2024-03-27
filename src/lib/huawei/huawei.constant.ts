@@ -1,0 +1,1 @@
+export const HUAWEI_TOKEN = 'HUAWEI_INJECT_TOKEN';

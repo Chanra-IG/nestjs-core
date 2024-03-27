@@ -645,8 +645,8 @@ export class Tile38 {
     args: any[] = []
   ): Promise<T> {
     console.log(`SendCommand: ${command} ${args.join(' ')}`);
-    const result = (await this.redis.send_command(command, args).then(x => JSON.parse(x))) as T;
-    if (!result.ok) throw new Error((result as any).err);
-    return result;
+    const result = await this.redis.call(command, args);
+    if (!result) throw new Error((result as any).err);
+    return result as T;
   }
 }

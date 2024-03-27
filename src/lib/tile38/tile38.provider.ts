@@ -1,12 +1,12 @@
 import { Logger } from '@nestjs/common';
-import * as Redis from 'ioredis';
+import Redis from 'ioredis';
 
-import { ConfigService } from '../config';
 import { Tile38 } from './tile38';
 import { TILE38_TOKEN } from './tile38.constant';
 import { Tile38Config } from './tile38.dto';
+import { ConfigService } from '../config';
 
-let redis: Redis.Redis;
+let redis: Redis;
 
 export const Tile38Provider = {
   inject: [ConfigService],

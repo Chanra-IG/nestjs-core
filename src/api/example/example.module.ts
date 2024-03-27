@@ -3,7 +3,7 @@ import { Module } from '@nestjs/common';
 import { DownloadController } from './download/download.controller';
 import { ExcelJSController } from './exceljs/exceljs.controller';
 import { ExcelJSService } from './exceljs/exceljs.service';
-import { I18NextController } from './i18next/i18next.controller';
+// import { I18NextController } from './i18next/i18next.controller';
 import { IORedisController } from './ioredis/ioredis.controller';
 import { IORedisService } from './ioredis/ioredis.service';
 import { PDFMakeController } from './pdfmake/pdfmake.controller';
@@ -19,7 +19,7 @@ import { UploadController } from './upload/upload.controller';
     // -----------------
     DownloadController,
     ExcelJSController,
-    I18NextController,
+    // I18NextController,
     IORedisController,
     PDFMakeController,
     SequelizeController,

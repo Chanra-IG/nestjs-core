@@ -44,7 +44,7 @@ export class UploadService {
 
     if (!resize) {
       const bucket = folderType;
-      await file.move(`${bucket}/${fileName}`).then(([x]) => x.makePublic());
+      await file.move(`${bucket}/${fileName}`).then(([x]: any) => x.makePublic());
       return;
     }
 

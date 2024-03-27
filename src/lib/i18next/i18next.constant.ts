@@ -1,1 +1,0 @@
-export const I18NEXT_TOKEN = 'I18NEXT_INJECT_TOKEN';
